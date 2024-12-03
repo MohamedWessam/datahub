@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نسخ سياسة الاستخدام</title>
+    <script>
+        function copyTextToClipboard() {
+            var text = document.getElementById('privacy-policy').innerText;
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('تم نسخ النص!');
+        }
+    </script>
+</head>
+<body>
+    <h1>مرحبًا في صفحة النسخ التلقائي</h1>
+    
+    <p><button onclick="copyTextToClipboard()">نسخ سياسة الاستخدام</button></p>
+    
+    <div id="privacy-policy" style="display:none;">
+        هذه هي سياسة الاستخدام الخاصة بالتطبيق. يمكنك نسخ هذا النص عند الحاجة.
+    </div>
+
+</body>
+</html>
